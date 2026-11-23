@@ -1,0 +1,25 @@
+{
+  "name": "@tib/yacht-hig",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@tib/shared": "*",
+    "@tib/yacht-core": "*",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.0",
+    "@tib/react": "*",
+    "@ionic/react": "^9.0.12",
+    "@ionic/react-router": "^9.0.12",
+    "ionicons": "^8.1.0",
+    "react-router": "^6.30.0",
+    "react-router-dom": "^6.30.0",
+    "@tib/yacht-app": "*"
+  }
+}

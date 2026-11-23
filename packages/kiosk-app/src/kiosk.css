@@ -1,0 +1,25 @@
+/* Общие правила киоска для обеих систем: только доступность, без своих компонентов. */
+html, body { overscroll-behavior: none; user-select: none; -webkit-user-select: none; }
+
+/* Высокий контраст (тема всегда светлая): чёрный текст и акцент, второстепенный текст не бледнеет */
+.kiosk-contrast {
+  --f7-text-color: #000;
+  --f7-page-bg-color: #fff;
+  --f7-list-item-footer-text-color: #000;
+  --f7-list-item-text-text-color: #000;
+  --f7-list-item-after-text-color: #000;
+  --f7-block-footer-text-color: #000;
+  --f7-block-header-text-color: #000;
+  --f7-card-footer-text-color: #000;
+  --f7-navbar-subtitle-text-color: #000;
+  --f7-block-title-text-color: #000;
+}
+.kiosk-contrast .card,
+.kiosk-contrast .list-strong ul,
+.kiosk-contrast .chip { outline: 2px solid #000; }
+
+/* Видимый фокус для навигации без касаний */
+:focus-visible { outline: 3px solid var(--f7-theme-color) !important; outline-offset: 2px; }
+
+/* Логотип в медиа-слоте чипа заполняет круг целиком */
+.chip-media img { object-fit: cover; }

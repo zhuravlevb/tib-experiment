@@ -1,0 +1,19 @@
+{
+  "name": "@tib/react",
+  "private": true,
+  "type": "module",
+  "main": "src/index.tsx",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./m3-expressive.css": "./src/m3-expressive.css",
+    "./ios-theme.css": "./src/ios-theme.css"
+  },
+  "types": "src/index.tsx",
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "peerDependencies": {
+    "react": "*",
+    "zustand": "*"
+  }
+}

@@ -1,0 +1,81 @@
+/*
+ * M3 Expressive поверх темы md Framework7 — только официальные токены:
+ * шкала скруглений (corner extra-large / extra-extra-large), emphasized-типографика,
+ * пружинная анимация (motion spring tokens в CSS-аппроксимации из m3.material.io).
+ * Своих компонентов нет: меняются только CSS-переменные и переходы компонентов F7.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300..900&display=swap');
+
+:root {
+  --m3e-spring-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.9);
+  --m3e-spring-fast-spatial-ms: 350ms;
+  --m3e-spring-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1);
+  --m3e-spring-default-spatial-ms: 500ms;
+  --m3e-spring-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1);
+  --m3e-spring-fast-effects-ms: 150ms;
+  --m3e-corner-extra-large: 28px;
+  --m3e-corner-extra-large-increased: 32px;
+  --m3e-corner-extra-extra-large: 48px;
+  --m3e-corner-large: 16px;
+  --m3e-corner-medium: 12px;
+}
+
+.md {
+  --f7-font-family: 'Roboto Flex', Roboto, system-ui, sans-serif;
+  --f7-card-border-radius: var(--m3e-corner-extra-large);
+  --f7-card-expandable-border-radius: var(--m3e-corner-extra-large);
+  --f7-sheet-border-radius: var(--m3e-corner-extra-large);
+  --f7-dialog-border-radius: var(--m3e-corner-extra-large);
+  --f7-list-inset-border-radius: var(--m3e-corner-extra-large);
+  --f7-list-strong-inset-border-radius: var(--m3e-corner-extra-large);
+  --f7-segmented-raised-border-radius: 9999px;
+  --f7-segmented-strong-border-radius: 9999px;
+  --f7-fab-extended-border-radius: var(--m3e-corner-large);
+  --f7-searchbar-input-border-radius: 9999px;
+  --f7-toast-border-radius: var(--m3e-corner-medium);
+  --f7-navbar-title-font-weight: 600;
+  --f7-navbar-large-title-font-weight: 700;
+  --f7-block-title-font-weight: 600;
+  --f7-card-header-font-weight: 600;
+}
+
+/* Expressive shape morph: круглая кнопка при нажатии «сжимается» в скруглённый квадрат на пружине */
+.md .button,
+.md .fab > a,
+.md .chip,
+.md .card {
+  transition:
+    border-radius var(--m3e-spring-fast-spatial-ms) var(--m3e-spring-fast-spatial),
+    transform var(--m3e-spring-fast-spatial-ms) var(--m3e-spring-fast-spatial),
+    background-color var(--m3e-spring-fast-effects-ms) var(--m3e-spring-fast-effects),
+    color var(--m3e-spring-fast-effects-ms) var(--m3e-spring-fast-effects);
+}
+.md .button.button-fill,
+.md .button.button-tonal,
+.md .button.button-outline,
+.md .button.button-large {
+  border-radius: 9999px;
+}
+.md .button:active,
+.md .fab > a:active {
+  border-radius: var(--m3e-corner-medium);
+}
+.md .card.card-raised:active,
+.md .card.active-state {
+  transform: scale(0.98);
+  border-radius: var(--m3e-corner-extra-large-increased);
+}
+
+/* Модальные окна открываются на пространственной пружине */
+.md .sheet-modal,
+.md .popup,
+.md .dialog {
+  transition-timing-function: var(--m3e-spring-default-spatial) !important;
+}
+
+/* Emphasized-типографика для крупных заголовков */
+.md .title-large-text,
+.md .block-title-large {
+  font-variation-settings: 'wght' 750, 'opsz' 48;
+  letter-spacing: -0.02em;
+}

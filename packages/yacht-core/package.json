@@ -1,0 +1,14 @@
+{
+  "name": "@tib/yacht-core",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@tib/shared": "*",
+    "zustand": "^5.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc -p ."
+  }
+}

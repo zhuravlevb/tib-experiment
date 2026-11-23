@@ -1,0 +1,26 @@
+{
+  "name": "tib-experiment",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:kiosk-m3": "npm run dev -w apps/kiosk-m3",
+    "dev:kiosk-hig": "npm run dev -w apps/kiosk-hig",
+    "dev:yacht-m3": "npm run dev -w apps/yacht-m3",
+    "dev:yacht-hig": "npm run dev -w apps/yacht-hig",
+    "build:all": "npm run build --workspaces --if-present && node scripts/build-site.mjs",
+    "test": "vitest run",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.0"
+  }
+}
