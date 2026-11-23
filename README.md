@@ -7,6 +7,8 @@
 | Единая касса фудкорта (киоск 1080×1920) + табло выдачи | `apps/kiosk-m3` | `apps/kiosk-hig` |
 | Пульт яхты для владельца (телефон) | `apps/yacht-m3` | `apps/yacht-hig` |
 
+Живые прототипы: https://zhuravlevb.github.io/tib-experiment/ (собираются из `main` автоматически).
+
 Логика и флоу описаны в [docs/flows.md](docs/flows.md).
 
 Как смотреть демо:
